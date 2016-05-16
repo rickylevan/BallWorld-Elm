@@ -3,7 +3,7 @@ import Time exposing (Time, millisecond, inSeconds)
 import Color
 import Element
 import Collage
-import Html exposing (Html)
+import Html exposing (..)
 import AnimationFrame
 import Math.Vector2 exposing (..)
 
@@ -130,7 +130,7 @@ distance b0 b1 =
     let vec0 = vec2 b0.x b0.y
         vec1 = vec2 b1.x b1.y
     in
-        (sub vec0 vec1) |> length
+        (Math.Vector2.sub vec0 vec1) |> length
 
 
 collisionTime : Ball -> Ball -> Float
